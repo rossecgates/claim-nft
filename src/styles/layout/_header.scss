@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 98px 0 57px;
+  width: 970px;
+  margin: auto;
+
+  &__logo {
+    height: 117px;
+    width: 325px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    width: 585px;
+    color: #3f4246;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 115%;
+  }
+}
