@@ -1,0 +1,24 @@
+.home {
+  padding-bottom: 211px;
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+
+    &-earn {
+      color: #6b6ef9;
+    }
+  }
+
+  &__statistic {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #262626;
+    margin-top: 56px;
+
+    &-status {
+      color: #5f8afa;
+    }
+  }
+}

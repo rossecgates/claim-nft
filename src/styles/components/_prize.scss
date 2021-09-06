@@ -1,0 +1,16 @@
+.prize {
+  margin-top: 51px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #a463b0;
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+}

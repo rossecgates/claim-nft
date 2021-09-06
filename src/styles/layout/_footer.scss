@@ -3,9 +3,10 @@
   font-size: 14px;
   line-height: 150%;
   color: #262626;
+  min-width: 325px;
 
   &__text {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
     max-width: 216px;
   }
 
@@ -14,6 +15,6 @@
   }
 
   &__logo {
-    margin-top: 60px;
+    margin-top: 57px;
   }
 }
