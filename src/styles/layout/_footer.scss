@@ -1,0 +1,19 @@
+.footer {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #262626;
+
+  &__text {
+    margin-bottom: 1.5rem;
+    max-width: 216px;
+  }
+
+  &__link {
+    color: #5f8afa;
+  }
+
+  &__logo {
+    margin-top: 60px;
+  }
+}

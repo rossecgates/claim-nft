@@ -6,10 +6,10 @@ import Footer from '../Footer';
 const Layout = ({ children }) => (
   <div className="layout">
     <Header />
-    <div className="content">
-      <div className="page">{children}</div>
+    <div className="layout__content">
+      <Footer />
+      <div className="layout__page">{children}</div>
     </div>
-    <Footer />
   </div>
 );
 
