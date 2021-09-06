@@ -1,0 +1,16 @@
+@import './utilites/variables';
+
+// Mixins
+
+@import './utilites/base';
+
+// Layout
+@import './layout/layout';
+@import './layout/header';
+@import './layout/footer';
+
+// components
+
+//pages
+@import './pages/home';
+@import './pages/about';
