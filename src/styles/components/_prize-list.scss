@@ -1,0 +1,42 @@
+.prize-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  position: relative;
+  color: #262626;
+  display: flex;
+  gap: 20px;
+
+  &__item {
+    background-color: #fff;
+    padding: 11px 15px 12px;
+    border-radius: 8px;
+    width: 216px;
+  }
+
+  &__amount {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 68px;
+    background: linear-gradient(180deg, #a463b0 0%, #6b6ef9 100%);
+    overflow: hidden;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #6b6ef9;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #262626;
+    margin-top: 3px;
+  }
+
+  &__background {
+    position: absolute;
+    left: -100px;
+    top: -200px;
+    z-index: -1;
+  }
+}
