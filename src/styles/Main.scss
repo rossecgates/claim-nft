@@ -10,7 +10,9 @@
 @import './layout/footer';
 
 // components
+@import './components/prize';
+@import './components/prize-list';
+@import './components/sign-up';
 
 //pages
 @import './pages/home';
-@import './pages/about';

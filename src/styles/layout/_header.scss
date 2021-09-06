@@ -1,16 +1,15 @@
 .header {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 98px 0 57px;
+  padding: 95px 0 53px;
   width: 970px;
   margin: auto;
 
   &__logo {
     height: 117px;
     width: 325px;
-    padding-top: 30px;
+    padding-top: 45px;
     display: flex;
     align-items: center;
   }
