@@ -1,16 +1,25 @@
 .prize-list {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 19px;
-  position: relative;
-  color: #262626;
   display: flex;
   gap: 20px;
 
+  @include for-desktop-small {
+    flex-wrap: wrap;
+  }
+
+  @include for-phone {
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    width: 100vw;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
   &__item {
-    background-color: #fff;
+    background-color: $white;
     padding: 11px 15px 12px;
     border-radius: 8px;
+    min-width: 216px;
     width: 216px;
   }
 
@@ -22,21 +31,11 @@
     overflow: hidden;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #6b6ef9;
+    color: $slate-purple;
   }
 
   &__text {
-    font-weight: 500;
-    font-size: 14px;
     line-height: 19px;
-    color: #262626;
     margin-top: 3px;
-  }
-
-  &__background {
-    position: absolute;
-    left: -100px;
-    top: -200px;
-    z-index: -1;
   }
 }

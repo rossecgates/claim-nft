@@ -1,5 +1,10 @@
 .prize {
   margin-top: 51px;
+  position: relative;
+
+  @include for-tablet {
+    margin-top: 41px;
+  }
 
   &__title {
     font-weight: 600;
@@ -7,10 +12,17 @@
     line-height: 19px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #a463b0;
+    color: $lilac;
   }
 
   &__list {
     margin-top: 20px;
+  }
+
+  &__background {
+    position: absolute;
+    left: -100px;
+    top: -150px;
+    z-index: -1;
   }
 }
