@@ -1,24 +1,47 @@
 .home {
   padding-bottom: 211px;
+
   &__title {
-    font-weight: 500;
     font-size: 30px;
     line-height: 41px;
 
+    @include for-tablet {
+      font-size: 20px;
+      line-height: 27px;
+
+      br {
+        display: none;
+      }
+    }
+
     &-earn {
-      color: #6b6ef9;
+      color: $slate-purple;
+    }
+  }
+
+  &__sign-up-text {
+    margin-top: 49px;
+    font-size: 24px;
+    line-height: 33px;
+
+    @include for-tablet {
+      font-size: 20px;
+      line-height: 27px;
     }
   }
 
   &__statistic {
-    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
-    color: #262626;
     margin-top: 56px;
 
+    @include for-tablet {
+      font-size: 20px;
+    }
+
     &-status {
-      color: #5f8afa;
+      color: $blue;
+      font-weight: 600;
     }
   }
 }

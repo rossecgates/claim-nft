@@ -6,12 +6,35 @@
   width: 970px;
   margin: auto;
 
+  @include for-tablet-big {
+    gap: 10px;
+    width: unset;
+    margin: unset;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include for-phone {
+    flex-wrap: wrap;
+    padding: 10px 20px 24px;
+    align-items: unset;
+  }
+
   &__logo {
     height: 117px;
     width: 325px;
     padding-top: 45px;
     display: flex;
     align-items: center;
+
+    @include for-tablet {
+      padding-top: 20px;
+      width: 270px;
+
+      svg {
+        width: 196px;
+      }
+    }
   }
 
   &__text {
@@ -20,5 +43,9 @@
     font-weight: 500;
     font-size: 48px;
     line-height: 115%;
+
+    @include for-tablet-big {
+      font-size: 30px;
+    }
   }
 }

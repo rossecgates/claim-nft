@@ -7,7 +7,7 @@ const Header = () => (
   <div className="header">
     <ReactSVG className="header__logo" src={logo} />
     <div className="header__text">
-      Join the Crypto Marketing Conference & Contest
+      Join the Crypto Marketing Conference&nbsp;&&nbsp;Contest
     </div>
   </div>
 );
