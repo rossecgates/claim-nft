@@ -1,0 +1,60 @@
+.sign-form {
+  margin-top: 24px;
+  max-width: 418px;
+  height: 57px;
+  background: $white;
+  box-shadow: 0px 0px 15px rgba(107, 110, 249, 0.25);
+  border-radius: 100px;
+  overflow: hidden;
+  display: flex;
+
+  @include for-phone {
+    width: 100%;
+  }
+
+  &__input {
+    flex: 1 1 100%;
+    padding-left: 30px;
+    font-size: 20px;
+    padding-right: 10px;
+
+    @include for-tablet {
+      font-size: 18px;
+      width: 100%;
+    }
+
+    @include for-phone-small {
+      padding-left: 15px;
+      padding-right: 5px;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 27px;
+      color: $gray;
+
+      @include for-tablet {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__button {
+    white-space: nowrap;
+    padding: 10px 30px 14px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    background: linear-gradient(138.93deg, $blue 22.36%, $slate-purple 76.72%);
+    font-size: 24px;
+    line-height: 33px;
+    color: $white;
+
+    @include for-tablet {
+      font-size: 18px;
+    }
+
+    @include for-phone-small {
+      padding: 10px 15px 14px;
+    }
+  }
+}
