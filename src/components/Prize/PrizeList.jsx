@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactSVG } from 'react-svg';
-import background from '../../assets/images/prize-background.svg';
 
 const PrizeList = ({ className }) => (
   <div className={`prize-list ${className || ''}`}>
-    <ReactSVG className="prize-list__background" src={background} />
     <div className="prize-list__item">
       <p className="prize-list__amount">$10k</p>
       <p className="prize-list__text">

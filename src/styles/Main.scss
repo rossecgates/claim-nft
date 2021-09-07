@@ -1,6 +1,7 @@
 @import './utilites/variables';
 
 // Mixins
+@import './utilites/mixins';
 
 @import './utilites/base';
 
@@ -12,7 +13,7 @@
 // components
 @import './components/prize';
 @import './components/prize-list';
-@import './components/sign-up';
+@import './components/sign-form';
 
 //pages
 @import './pages/home';

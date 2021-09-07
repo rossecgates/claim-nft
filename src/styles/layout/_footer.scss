@@ -1,20 +1,33 @@
 .footer {
   font-weight: 600;
-  font-size: 14px;
   line-height: 150%;
-  color: #262626;
-  min-width: 325px;
+  min-width: $left-block-width;
+
+  @include for-tablet {
+    font-size: 12px;
+    width: 100%;
+    min-width: unset;
+  }
 
   &__text {
     margin-bottom: 1.7rem;
     max-width: 216px;
+
+    @include for-tablet {
+      margin-bottom: 1.4rem;
+      max-width: 238px;
+    }
   }
 
   &__link {
-    color: #5f8afa;
+    color: $blue;
   }
 
   &__logo {
     margin-top: 57px;
+
+    @include for-tablet {
+      margin-top: 40px;
+    }
   }
 }
