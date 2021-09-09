@@ -1,9 +1,11 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
+import PropTypes from 'prop-types';
+
 import footerLogo from '../../assets/images/footer-logo.svg';
 
-const Footer = () => (
-  <footer className="footer">
+const Footer = ({ className }) => (
+  <footer className={`footer ${className || ''} `}>
     <p className="footer__text">
       The Generation Crypto Conference and Contest is awarding over $1,000,000
       in prizes and new business opportunities.
@@ -15,5 +17,9 @@ const Footer = () => (
     <ReactSVG className="footer__logo" src={footerLogo} />
   </footer>
 );
+
+Footer.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Footer;

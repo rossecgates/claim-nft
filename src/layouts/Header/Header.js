@@ -1,14 +1,17 @@
 import React from 'react';
-import { ReactSVG } from 'react-svg';
-
-import logo from '../../assets/images/logo.svg';
+import Logo from '../../components/Logo';
 
 const Header = () => (
   <div className="header">
-    <ReactSVG className="header__logo" src={logo} />
+    <Logo />
+
     <div className="header__text">
       Join the Crypto Marketing Conference&nbsp;&&nbsp;Contest
     </div>
+    {/* <div className="header__text">
+      <span className="header__text-color">Congrats!</span> You are signed up
+      and ready to start referring.
+    </div> */}
   </div>
 );
 
