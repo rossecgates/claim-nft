@@ -1,0 +1,23 @@
+.logo {
+  position: relative;
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    right: -38px;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+
+    @include for-tablet {
+      top: -12px;
+      right: 45px;
+    }
+  }
+
+  &__img {
+    @include for-tablet {
+      width: 100px;
+    }
+  }
+}
