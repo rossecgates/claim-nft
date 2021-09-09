@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './pages/Home';
+import SignIn from './pages/SignIn';
 
 const routes = [
   {
@@ -7,6 +8,11 @@ const routes = [
     key: 'ROOT',
     exact: true,
     component: () => <Home />,
+  },
+  {
+    path: '/sign-in',
+    key: 'SIGN_IN',
+    component: () => <SignIn />,
   },
 ];
 
