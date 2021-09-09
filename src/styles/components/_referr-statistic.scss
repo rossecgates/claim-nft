@@ -1,0 +1,48 @@
+.referr-statistic {
+  position: relative;
+
+  &__title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  &__count {
+    padding: 20px 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    color: $black-h1;
+    font-size: 36px;
+    line-height: 49px;
+    width: fit-content;
+    margin-top: 24px;
+
+    &-color {
+      display: inline-block;
+      margin-right: 5px;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 68px;
+      background: linear-gradient(180deg, #a463b0 0%, #6b6ef9 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #6b6ef9;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    line-height: 150%;
+    margin-top: 13px;
+
+    &-color {
+      color: $lilac;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    right: -84px;
+    bottom: -140px;
+  }
+}

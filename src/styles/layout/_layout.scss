@@ -1,24 +1,4 @@
 .layout {
   overflow: hidden;
   padding-bottom: 43px;
-
-  &__page {
-    width: 100%;
-  }
-
-  &__content {
-    display: flex;
-    gap: 30px;
-    width: $content-block;
-    padding: 0 20px;
-    margin: auto;
-
-    @include for-tablet-big {
-      width: 100%;
-      flex-wrap: wrap;
-      flex-direction: column-reverse;
-      padding: 0 20px;
-      gap: 40px;
-    }
-  }
 }

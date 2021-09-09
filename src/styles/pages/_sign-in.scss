@@ -1,0 +1,27 @@
+.sign-in {
+  width: $content-block;
+  margin: auto;
+  padding: 0 20px;
+
+  @include for-tablet-big {
+    width: 100%;
+  }
+
+  &__data {
+    display: flex;
+    gap: 23px;
+
+    @include for-tablet-big {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+  }
+
+  &__footer {
+    margin-top: 70px;
+  }
+
+  &__share-social {
+    margin-top: 49px;
+  }
+}

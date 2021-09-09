@@ -1,5 +1,21 @@
 .home {
-  padding-bottom: 211px;
+  width: $content-block;
+  margin: auto;
+  padding: 0 20px;
+
+  @include for-tablet-big {
+    width: 100%;
+  }
+
+  &__data {
+    display: flex;
+    gap: 23px;
+
+    @include for-tablet-big {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+  }
 
   &__title {
     font-size: 30px;

@@ -6,7 +6,7 @@
 @import './utilites/base';
 
 // Layout
-@import './layout/layout';
+@import './layout//layout';
 @import './layout/header';
 @import './layout/footer';
 
@@ -14,6 +14,12 @@
 @import './components/prize';
 @import './components/prize-list';
 @import './components/sign-form';
+@import './components/referr-statistic';
+@import './components/share';
+@import './components/share-social';
+@import './components/share-social-list';
+@import './components/logo';
 
 //pages
 @import './pages/home';
+@import './pages//sign-in';
