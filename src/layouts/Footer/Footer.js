@@ -11,10 +11,23 @@ const Footer = ({ className }) => (
       in prizes and new business opportunities.
     </p>
     <p className="footer__text">Oct 26 — Nov 14, 2021</p>
-    <a className="footer__link" href="/">
+    <a
+      className="footer__link"
+      href="https://near.org/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Learn more &gt;
     </a>
-    <ReactSVG className="footer__logo" src={footerLogo} />
+    <div>
+      <a
+        href="https://generationcrypto.splashthat.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ReactSVG className="footer__logo" src={footerLogo} />
+      </a>
+    </div>
   </footer>
 );
 
