@@ -6,6 +6,10 @@
     margin-top: 41px;
   }
 
+  @include for-phone {
+    margin-top: 27px;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 14px;

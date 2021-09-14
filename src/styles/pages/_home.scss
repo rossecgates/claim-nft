@@ -1,5 +1,25 @@
 .home {
-  padding-bottom: 211px;
+  width: $content-block;
+  margin: auto;
+  padding: 0 20px;
+
+  @include for-tablet-big {
+    width: 100%;
+  }
+
+  &__header {
+    line-height: 115%;
+  }
+
+  &__data {
+    display: flex;
+    gap: 23px;
+
+    @include for-tablet-big {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+  }
 
   &__title {
     font-size: 30px;
@@ -14,8 +34,22 @@
       }
     }
 
+    @include for-phone {
+      br {
+        display: block;
+      }
+    }
+
     &-earn {
       color: $slate-purple;
+    }
+  }
+
+  &__prize {
+    margin-top: 52px;
+
+    @include for-phone {
+      margin-top: 42px;
     }
   }
 
@@ -27,6 +61,7 @@
     @include for-tablet {
       font-size: 20px;
       line-height: 27px;
+      margin-top: 45px;
     }
   }
 
@@ -37,11 +72,18 @@
 
     @include for-tablet {
       font-size: 20px;
+      margin-top: 65px;
     }
 
     &-status {
+      background: inherit;
+      font-size: inherit;
       color: $blue;
       font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -1,0 +1,62 @@
+.logo {
+  position: relative;
+
+  &__svg {
+    height: 117px;
+    width: 325px;
+    padding-top: 84px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    @include for-tablet {
+      padding-top: 50px;
+      width: 200px;
+
+      svg {
+        width: 275px;
+      }
+    }
+
+    @include for-phone {
+      padding-top: 70px;
+    }
+
+    @include for-phone-small {
+      padding-top: 20px;
+
+      svg {
+        width: 150px;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    right: -38px;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+
+    @include for-tablet {
+      top: -27px;
+      right: -17px;
+    }
+
+    @include for-phone-small {
+      left: 45px;
+      top: 0px;
+    }
+  }
+
+  &__img {
+    @include for-tablet {
+      height: 200px;
+    }
+
+    @include for-phone-small {
+      height: 100px;
+    }
+  }
+}
