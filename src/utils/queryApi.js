@@ -16,7 +16,8 @@ const setupObj = (email, isSignIn) => ({
       : {
           api_key: '7YJ774',
           email,
-          referral_link: 'https://near.org/ru/',
+          referral_link:
+            'https://reverent-snyder-9335f9.netlify.app/?ref_id=LIUZQQMIX',
         },
   ),
 });
@@ -25,6 +26,7 @@ const signInUp = async (email, type = 'sign-up') => {
   let data;
   const isSignIn = type === 'sign-in';
   const URL = type === 'sign-in' ? URL_SIGN_IN : URL_SIGN_UP;
+  console.log('login: ', isSignIn);
 
   try {
     const response = await fetch(URL, setupObj(email, isSignIn));
