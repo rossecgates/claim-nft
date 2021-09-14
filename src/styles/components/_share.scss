@@ -72,6 +72,10 @@
       display: flex;
       justify-content: center;
       background: linear-gradient(138.93deg, #5f8afa 22.36%, #6b6ef9 76.72%);
+
+      @include for-phone-small {
+        width: 70px;
+      }
     }
 
     &-animation {
@@ -98,7 +102,7 @@
       }
 
       @include for-phone-small {
-        padding: 10px 15px 14px;
+        padding: 10px 20px 14px;
       }
     }
   }
