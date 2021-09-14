@@ -12,7 +12,9 @@ const Login = () => {
       <div className="login__data">
         <Footer />
         <main>
-          <p className="login__title">Enter your email to login (or sign up)</p>
+          <p className="login__title">
+            Enter your email to login (or&nbsp;sign&nbsp;up)
+          </p>
           <SignForm isLoginPage={isLoginPage} />
         </main>
       </div>
