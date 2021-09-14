@@ -23,7 +23,7 @@
 }
 
 @mixin for-phone-small {
-  @media (max-width: 375px) {
+  @media (max-width: 385px) {
     @content;
   }
 }

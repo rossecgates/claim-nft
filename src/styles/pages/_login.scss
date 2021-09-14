@@ -1,0 +1,32 @@
+.login {
+  width: $content-block;
+  margin: auto;
+  padding: 0 20px;
+
+  @include for-tablet-big {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 33px;
+
+    @include for-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 14px;
+  }
+
+  &__data {
+    display: flex;
+    gap: 30px;
+
+    @include for-tablet-big {
+      flex-direction: column-reverse;
+      gap: 93px;
+    }
+  }
+}

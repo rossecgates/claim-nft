@@ -14,20 +14,26 @@
     max-width: 216px;
 
     @include for-tablet {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1rem;
       max-width: 238px;
     }
   }
 
   &__link {
     color: $blue;
+    transition: 0.2s all;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__logo {
     margin-top: 57px;
+    display: inline-block;
 
     @include for-tablet {
-      margin-top: 40px;
+      margin-top: 49px;
     }
   }
 }

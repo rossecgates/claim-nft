@@ -13,25 +13,11 @@
   }
 
   @include for-phone {
+    gap: 17px;
     flex-wrap: wrap;
     padding: 10px 0 24px;
     align-items: unset;
-  }
-
-  &__logo {
-    height: 117px;
-    width: 325px;
-    padding-top: 84px;
-    display: flex;
-    align-items: center;
-    @include for-tablet {
-      padding-top: 20px;
-      width: 200px;
-
-      svg {
-        width: 196px;
-      }
-    }
+    line-height: 41px;
   }
 
   &__text {
@@ -40,8 +26,22 @@
     font-size: 48px;
     line-height: 115%;
 
+    @include for-phone {
+      line-height: 41px;
+    }
+
     &-color {
       color: $lilac;
+
+      @include for-phone {
+        display: block;
+      }
+    }
+
+    &-login {
+      @include for-phone {
+        display: unset;
+      }
     }
 
     @include for-tablet-big {

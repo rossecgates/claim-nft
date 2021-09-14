@@ -2,6 +2,7 @@
   width: $content-block;
   margin: auto;
   padding: 0 20px;
+  position: relative;
 
   @include for-tablet-big {
     width: 100%;
@@ -15,13 +16,31 @@
       flex-direction: column-reverse;
       gap: 40px;
     }
+
+    @include for-phone {
+      padding-top: 11px;
+      gap: 16px;
+    }
   }
 
   &__footer {
     margin-top: 70px;
+
+    @include for-phone {
+      margin-top: unset;
+    }
   }
 
   &__share-social {
     margin-top: 49px;
+
+    @include for-tablet {
+      margin-top: 39px;
+    }
+  }
+
+  &__loader {
+    opacity: 1;
+    pointer-events: none;
   }
 }
