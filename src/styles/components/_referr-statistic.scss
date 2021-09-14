@@ -1,9 +1,25 @@
 .referr-statistic {
   position: relative;
 
+  @include for-phone {
+    position: absolute;
+    top: 31px;
+    right: 38px;
+  }
+
+  @include for-phone-small {
+    top: 15px;
+    right: 15px;
+  }
+
   &__title {
     font-size: 20px;
     line-height: 27px;
+
+    @include for-phone {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__count {
@@ -16,6 +32,15 @@
     width: fit-content;
     margin-top: 24px;
 
+    @include for-phone {
+      font-size: 18px;
+      line-height: 25px;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+    }
+
     &-color {
       display: inline-block;
       margin-right: 5px;
@@ -26,6 +51,12 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: #6b6ef9;
+
+      @include for-phone {
+        font-size: 24px;
+        line-height: 33px;
+        margin-right: 8px;
+      }
     }
   }
 
@@ -33,6 +64,12 @@
     font-weight: 600;
     line-height: 150%;
     margin-top: 13px;
+
+    @include for-phone {
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 16px;
+    }
 
     &-color {
       color: $lilac;
@@ -42,7 +79,11 @@
   &__background {
     position: absolute;
     z-index: -1;
-    right: -84px;
+    left: -120px;
     bottom: -140px;
+
+    @include for-phone {
+      left: -200px;
+    }
   }
 }
