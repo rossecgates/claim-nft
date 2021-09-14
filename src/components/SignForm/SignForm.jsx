@@ -1,36 +1,62 @@
-import React from 'react';
+/* eslint-disable no-console */
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-
+import * as EmailValidator from 'email-validator';
+import { useHistory } from 'react-router-dom';
 import SignButton from '../SignButton/SignButton';
+import EmailContext from '../../contexts/EmailContext';
 
-const SignForm = ({ isSignIn }) => (
-  <form className="sign-form">
-    <input
-      placeholder="Enter your email..."
-      className="sign-form__input"
-      type="text"
-    />
-    {isSignIn ? (
-      <SignButton
-        className="sign-form__button"
-        onSubmit={() => {}}
-        text="Sign in"
+const SignForm = ({ isLoginPage }) => {
+  const [error, setError] = useState(false);
+  const [value, setValue] = useState('');
+  const { setEmail } = useContext(EmailContext);
+
+  const history = useHistory();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const isEmailValidate = EmailValidator.validate(value);
+
+    if (!isEmailValidate) {
+      setError(true);
+    } else {
+      setEmail(value);
+      history.push('/sign-in');
+    }
+  };
+
+  const onFocus = () => setError(false);
+
+  const onChange = ({ target }) => setValue(target.value.trim());
+
+  return (
+    <form
+      className={`sign-form ${error ? 'sign-form__error' : ''}`}
+      onSubmit={onSubmit}
+    >
+      <input
+        placeholder="Enter your email..."
+        className="sign-form__input"
+        type="text"
+        value={value}
+        onChange={onChange}
+        onFocus={onFocus}
       />
-    ) : (
-      <SignButton
-        className="sign-form__button"
-        onSubmit={() => {}}
-        text="Sign up"
-      />
-    )}
-  </form>
-);
+      {isLoginPage ? (
+        <SignButton className="sign-form__button" text="Submit" />
+      ) : (
+        <SignButton className="sign-form__button" text="Sign up" />
+      )}
+    </form>
+  );
+};
 
 SignForm.propTypes = {
-  isSignIn: PropTypes.bool,
+  isLoginPage: PropTypes.bool,
 };
 
 SignForm.defaultProps = {
-  isSignIn: false,
+  isLoginPage: false,
 };
 export default SignForm;
