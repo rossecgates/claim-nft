@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.svg';
 
 const Logo = () => (
   <div className="logo">
-    <ReactSVG className="header__logo" src={logo} />
+    <ReactSVG className="logo__svg" src={logo} />
     <div className="logo__background">
       <img
         className="logo__img"
