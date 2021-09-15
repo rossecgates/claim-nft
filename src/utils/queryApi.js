@@ -1,35 +1,24 @@
 /* eslint-disable no-console */
-const URL_SIGN_UP = 'https://getwaitlist.com/api/v1/waitlists/submit';
-const URL_SIGN_IN = 'https://getwaitlist.com/api/v1/users/status';
 
-const setupObj = (email, isSignIn) => ({
+const URL = 'https://getwaitlist.com/api/v1/waitlists/submit';
+
+const setupObj = (email) => ({
   method: 'POST',
   headers: {
     'Content-Type': 'application/json;charset=utf-8',
   },
-  body: JSON.stringify(
-    isSignIn
-      ? {
-          api_key: '7YJ774',
-          email,
-        }
-      : {
-          api_key: '7YJ774',
-          email,
-          referral_link:
-            'https://reverent-snyder-9335f9.netlify.app/?ref_id=LIUZQQMIX',
-        },
-  ),
+  body: JSON.stringify({
+    api_key: '7YJ774',
+    email,
+    referral_link: document.URL,
+  }),
 });
 
-const signInUp = async (email, type = 'sign-up') => {
+const signInUp = async (email) => {
   let data;
-  const isSignIn = type === 'sign-in';
-  const URL = type === 'sign-in' ? URL_SIGN_IN : URL_SIGN_UP;
-  console.log('login: ', isSignIn);
 
   try {
-    const response = await fetch(URL, setupObj(email, isSignIn));
+    const response = await fetch(URL, setupObj(email));
 
     data = await response.json();
   } catch (e) {

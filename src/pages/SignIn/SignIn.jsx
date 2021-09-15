@@ -15,12 +15,16 @@ import { signInUp } from '../../utils/queryApi';
 const SignIn = () => {
   const [loader, setLoader] = useState(true);
 
+  console.log('URL: ', document.URL);
+
   const dataInLocalStorage = localStorage.data
     ? JSON.parse(localStorage.data)
     : {};
 
   const history = useHistory();
-  const { email } = useContext(EmailContext);
+  const { submitData } = useContext(EmailContext);
+  const { email } = submitData;
+
   const { setData } = useContext(DataContext);
 
   useEffect(async () => {

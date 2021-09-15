@@ -5,16 +5,23 @@ import DataContext from '../../contexts/DataContext';
 
 const initData = {
   current_priority: 0,
-  referral_link: 'https://near.org',
+  referral_link: 'https://reverent-snyder-9335f9.netlify.app/',
   total_referrals: 0,
   total_users: 0,
 };
+
+const initSubmit = {
+  email: '',
+  referral_link: 'https://reverent-snyder-9335f9.netlify.app/',
+  type: 'sign-up',
+};
+
 const Layout = ({ children }) => {
-  const [email, setEmail] = useState('');
+  const [submitData, setSubmitData] = useState(initSubmit);
   const [data, setData] = useState(initData);
 
   return (
-    <EmailContext.Provider value={{ email, setEmail }}>
+    <EmailContext.Provider value={{ submitData, setSubmitData }}>
       <DataContext.Provider value={{ data, setData }}>
         <div className="layout">{children}</div>
       </DataContext.Provider>
