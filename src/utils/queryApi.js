@@ -2,7 +2,10 @@
 
 const URL = 'https://getwaitlist.com/api/v1/waitlists/submit';
 
-const referralLink = localStorage.getItem('referralLink');
+const referralLink =
+  localStorage.getItem('referralLink') === null
+    ? document.URL
+    : localStorage.getItem('referralLink');
 
 const setupObj = (email) => ({
   method: 'POST',
