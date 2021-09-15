@@ -9,8 +9,7 @@ import EmailContext from '../../contexts/EmailContext';
 const SignForm = ({ isLoginPage }) => {
   const [error, setError] = useState(false);
   const [value, setValue] = useState('');
-  const { setSubmitData } = useContext(EmailContext);
-  const url = document.URL;
+  const { setEmail } = useContext(EmailContext);
 
   const history = useHistory();
 
@@ -22,11 +21,7 @@ const SignForm = ({ isLoginPage }) => {
     if (!isEmailValidate) {
       setError(true);
     } else {
-      setSubmitData({
-        email: value,
-        referral_link: url,
-        type: isLoginPage ? 'sign-in' : 'sign-up',
-      });
+      setEmail(value);
       history.push('/sign-in');
     }
   };

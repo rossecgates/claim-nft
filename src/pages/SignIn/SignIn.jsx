@@ -22,8 +22,7 @@ const SignIn = () => {
     : {};
 
   const history = useHistory();
-  const { submitData } = useContext(EmailContext);
-  const { email } = submitData;
+  const { email } = useContext(EmailContext);
 
   const { setData } = useContext(DataContext);
 
@@ -33,8 +32,8 @@ const SignIn = () => {
     }
 
     const dataResponse = email
-      ? await signInUp(email, 'sign-up')
-      : await signInUp(dataInLocalStorage.registered_email, 'sign-in');
+      ? await signInUp(email)
+      : await signInUp(dataInLocalStorage.registered_email);
 
     if (dataResponse) {
       localStorage.setItem('data', JSON.stringify(dataResponse));
