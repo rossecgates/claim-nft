@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import EmailContext from '../../contexts/EmailContext';
@@ -10,18 +11,14 @@ const initData = {
   total_users: 0,
 };
 
-const initSubmit = {
-  email: '',
-  referral_link: 'https://reverent-snyder-9335f9.netlify.app/',
-  type: 'sign-up',
-};
-
 const Layout = ({ children }) => {
-  const [submitData, setSubmitData] = useState(initSubmit);
+  const [email, setEmail] = useState('');
   const [data, setData] = useState(initData);
 
+  console.log('rerender Layout: ', document.URL);
+
   return (
-    <EmailContext.Provider value={{ submitData, setSubmitData }}>
+    <EmailContext.Provider value={{ email, setEmail }}>
       <DataContext.Provider value={{ data, setData }}>
         <div className="layout">{children}</div>
       </DataContext.Provider>

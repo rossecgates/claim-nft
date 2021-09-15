@@ -7,9 +7,12 @@ import Header from '../../layouts/Header';
 
 const Home = () => {
   const history = useHistory();
+
   const checkStatus = () => {
     history.push('/login');
   };
+
+  localStorage.referralLink = document.URL;
 
   return (
     <div className="home">
