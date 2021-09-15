@@ -14,7 +14,7 @@ const setupObj = (email) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify({
-      api_key: '7YJ774',
+      api_key: '2UMW3K',
       email,
       referral_link: referralLink,
     }),
