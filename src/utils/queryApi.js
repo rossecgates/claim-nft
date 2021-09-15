@@ -2,22 +2,24 @@
 
 const URL = 'https://getwaitlist.com/api/v1/waitlists/submit';
 
-const referralLink =
-  localStorage.getItem('referralLink') === null
-    ? document.URL
-    : localStorage.getItem('referralLink');
+const setupObj = (email) => {
+  const referralLink =
+    localStorage.getItem('referralLink') === null
+      ? document.URL
+      : localStorage.getItem('referralLink');
 
-const setupObj = (email) => ({
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json;charset=utf-8',
-  },
-  body: JSON.stringify({
-    api_key: '7YJ774',
-    email,
-    referral_link: referralLink,
-  }),
-});
+  return {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify({
+      api_key: '7YJ774',
+      email,
+      referral_link: referralLink,
+    }),
+  };
+};
 
 const signInUp = async (email) => {
   let data;
