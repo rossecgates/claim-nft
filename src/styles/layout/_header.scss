@@ -6,7 +6,12 @@
   width: 970px;
   margin: auto;
 
+  @include for-desktop-small {
+    padding-top: 70px;
+  }
+
   @include for-tablet-big {
+    padding: 95px 0 53px;
     gap: 10px;
     width: unset;
     margin: unset;
@@ -21,10 +26,14 @@
   }
 
   &__text {
-    width: 585px;
+    min-width: 630px;
     color: $black-h1;
     font-size: 48px;
     line-height: 115%;
+
+    @include for-desktop-small {
+      min-width: unset;
+    }
 
     @include for-phone {
       line-height: 41px;
