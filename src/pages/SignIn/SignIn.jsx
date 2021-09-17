@@ -8,7 +8,6 @@ import Footer from '../../layouts/Footer';
 import ReferrStatistic from '../../components/ReferrStatistic';
 import Prize from '../../components/Prize';
 import Share from '../../components/Share';
-import ShareSocial from '../../components/ShareSocial';
 import Loader from '../../components/Loader';
 import { signInUp } from '../../utils/queryApi';
 
@@ -58,7 +57,6 @@ const SignIn = () => {
           </div>
           <main>
             <Share />
-            <ShareSocial className="sign-in__share-social" />
             <Prize />
           </main>
         </div>

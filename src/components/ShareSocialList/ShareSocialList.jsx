@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
-import React from 'react';
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import { EmailShareButton } from 'react-share';
+import DataContext from '../../contexts/DataContext';
 import twitter from '../../assets/images/twitter.svg';
 import linkedin from '../../assets/images/linkedin.svg';
 import instagram from '../../assets/images/instagram.svg';
@@ -11,10 +13,13 @@ import wechat from '../../assets/images/wechat.svg';
 import telegram from '../../assets/images/telegram.svg';
 import discord from '../../assets/images/discord.svg';
 
-const ShareSocialList = () => {
-  const onClick = () => {
+const ShareSocialList = ({ setCopy }) => {
+  const { data } = useContext(DataContext);
+
+  const onClick = (e) => {
+    e.preventDefault();
     const el = document.createElement('textarea');
-    el.value = 'Referral : https://reverent-snyder-9335f9.netlify.app/';
+    el.value = `Referral : ${data.referral_link}`;
     el.setAttribute('readonly', '');
     el.style.position = 'absolute';
     el.style.left = '-9999px';
@@ -22,6 +27,13 @@ const ShareSocialList = () => {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+
+    const link = e.currentTarget.href;
+    setCopy(true);
+
+    setTimeout(() => {
+      window.open(link, '_blank');
+    }, 700);
   };
 
   return (
@@ -29,7 +41,6 @@ const ShareSocialList = () => {
       <li>
         <a
           href="https://twitter.com/intent/tweet?url=http%3A%2F%2Freverent-snyder-9335f9.netlify.app/&text=Referral"
-          onClick={onClick}
           target="_blank"
         >
           <ReactSVG src={twitter} />
@@ -94,6 +105,10 @@ const ShareSocialList = () => {
       </li>
     </ul>
   );
+};
+
+ShareSocialList.propTypes = {
+  setCopy: PropTypes.func,
 };
 
 export default ShareSocialList;
