@@ -15,8 +15,6 @@ const Layout = ({ children }) => {
   const [email, setEmail] = useState('');
   const [data, setData] = useState(initData);
 
-  console.log('rerender Layout: ', document.URL);
-
   return (
     <EmailContext.Provider value={{ email, setEmail }}>
       <DataContext.Provider value={{ data, setData }}>
