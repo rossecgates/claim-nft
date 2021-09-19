@@ -21,7 +21,7 @@ const Footer = ({ className }) => (
     </a>
     <div>
       <a
-        href="https://generationcrypto.splashthat.com/"
+        href="https://www.generationcrypto.org/?utm_source=growth_tool&utm_medium=learn_more&utm_campaign=viral_share"
         target="_blank"
         rel="noopener noreferrer"
       >
