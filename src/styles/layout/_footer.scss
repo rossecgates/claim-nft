@@ -3,6 +3,10 @@
   line-height: 150%;
   min-width: $left-block-width;
 
+  @include for-tablet-big {
+    margin-top: 40px;
+  }
+
   @include for-tablet {
     font-size: 12px;
     width: 100%;

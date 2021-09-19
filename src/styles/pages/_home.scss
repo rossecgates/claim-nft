@@ -17,7 +17,7 @@
 
     @include for-tablet-big {
       flex-direction: column-reverse;
-      gap: 40px;
+      gap: unset;
     }
   }
 
