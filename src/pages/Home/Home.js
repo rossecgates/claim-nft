@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import Prize from '../../components/Prize';
 import SignForm from '../../components/SignForm';
 import Footer from '../../layouts/Footer';
@@ -14,24 +13,10 @@ const Home = () => {
     history.push('/login');
   };
 
-  console.log('api key = ', process.env.REACT_APP_API_KEY);
   localStorage.referralLink = document.URL;
 
   return (
-    <div className="home">
-      <Helmet>
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@flickr" />
-        <meta
-          name="twitter:title"
-          content="Small Island Developing States Photo Submission"
-        />
-        <meta name="twitter:description" content="View the album on Flickr." />
-        <meta
-          name="twitter:image"
-          content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"
-        />
-      </Helmet>
+    <div className="home twitter">
       <Header className="home__header" />
       <div className="home__data">
         <Footer />
