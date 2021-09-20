@@ -21,7 +21,10 @@ const ShareSocialList = ({ setCopy }) => {
     <ul className="share-social-list">
       <li>
         <a
-          href={`https://twitter.com/intent/tweet?url=http%3A%2F%2F${msg.shortLink}/&text=${msg.twitter}`}
+          href="https://twitter.com/"
+          // eslint-disable-next-line spaced-comment
+          /*href={`https://twitter.com/intent/tweet?url=http%3A%2F%2F${msg.shortLink}/&text=${msg.twitter}`}*/
+
           target="_blank"
           rel="noopener noreferrer"
         >

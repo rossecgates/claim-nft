@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import EmailContext from '../../contexts/EmailContext';
 import DataContext from '../../contexts/DataContext';
 import Header from '../../layouts/Header';
@@ -44,6 +45,23 @@ const SignIn = () => {
 
   return (
     <>
+      <Helmet>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@nytimes" />
+        <meta name="twitter:creator" content="@SarahMaslinNir" />
+        <meta
+          name="twitter:title"
+          content="Parade of Fans for Houston’s Funeral"
+        />
+        <meta
+          name="twitter:description"
+          content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
+        />
+        <meta
+          name="twitter:image"
+          content="https://genc.win/images/logo-background.png"
+        />
+      </Helmet>
       <Loader className={`${loader && 'sign-in__loader'}`} />
       <div className="sign-in">
         <Header />

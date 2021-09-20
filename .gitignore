@@ -6,4 +6,6 @@ build
 
 .gitkeep
 
+.env
+
 package-lock.json
