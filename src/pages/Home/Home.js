@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Prize from '../../components/Prize';
 import SignForm from '../../components/SignForm';
 import Footer from '../../layouts/Footer';
@@ -12,10 +14,28 @@ const Home = () => {
     history.push('/login');
   };
 
+  console.log('api key = ', process.env.REACT_APP_API_KEY);
   localStorage.referralLink = document.URL;
 
   return (
     <div className="home">
+      <Helmet>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@nytimes" />
+        <meta name="twitter:creator" content="@SarahMaslinNir" />
+        <meta
+          name="twitter:title"
+          content="Parade of Fans for Houston’s Funeral"
+        />
+        <meta
+          name="twitter:description"
+          content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
+        />
+        <meta
+          name="twitter:image"
+          content="https://genc.win/images/logo-background.png"
+        />
+      </Helmet>
       <Header className="home__header" />
       <div className="home__data">
         <Footer />
