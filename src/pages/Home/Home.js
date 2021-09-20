@@ -20,20 +20,16 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@nytimes" />
-        <meta name="twitter:creator" content="@SarahMaslinNir" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@flickr" />
         <meta
           name="twitter:title"
-          content="Parade of Fans for Houston’s Funeral"
+          content="Small Island Developing States Photo Submission"
         />
-        <meta
-          name="twitter:description"
-          content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
-        />
+        <meta name="twitter:description" content="View the album on Flickr." />
         <meta
           name="twitter:image"
-          content="https://genc.win/images/logo-background.png"
+          content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"
         />
       </Helmet>
       <Header className="home__header" />
