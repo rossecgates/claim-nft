@@ -6,7 +6,7 @@ import DataContext from '../../contexts/DataContext';
 
 const initData = {
   current_priority: 0,
-  referral_link: 'https://reverent-snyder-9335f9.netlify.app/',
+  referral_link: 'https://genc.win/',
   total_referrals: 0,
   total_users: 0,
 };

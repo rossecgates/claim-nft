@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import EmailContext from '../../contexts/EmailContext';
@@ -13,8 +12,6 @@ import { signInUp } from '../../utils/queryApi';
 
 const SignIn = () => {
   const [loader, setLoader] = useState(true);
-
-  console.log('URL: ', document.URL);
 
   const dataInLocalStorage = localStorage.data
     ? JSON.parse(localStorage.data)

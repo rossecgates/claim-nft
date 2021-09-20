@@ -18,6 +18,16 @@
 
   &__header {
     margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+
+    @include for-tablet-big {
+      margin-bottom: 0px;
+    }
+
+    @include for-phone {
+      margin-top: 5px;
+    }
   }
 
   &__data {
@@ -26,7 +36,7 @@
 
     @include for-tablet-big {
       flex-direction: column-reverse;
-      gap: 93px;
+      gap: unset;
     }
   }
 }

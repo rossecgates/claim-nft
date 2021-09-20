@@ -1,7 +1,12 @@
 .referr-statistic {
   position: relative;
 
+  @include for-tablet-big {
+    margin-top: 40px;
+  }
+
   @include for-phone {
+    margin-top: unset;
     position: absolute;
     top: 31px;
     right: 38px;

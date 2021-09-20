@@ -24,8 +24,12 @@ const Header = ({ className }) => {
       case '/login':
         return (
           <div className={`header__text ${className || ''} `}>
-            <span className="header__text-color header__text-login">Login</span>{' '}
-            to continue
+            <div>
+              <span className="header__text-color header__text-login">
+                Login
+              </span>{' '}
+              to continue
+            </div>
           </div>
         );
       default:

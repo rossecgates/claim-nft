@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
 import { EmailShareButton } from 'react-share';
-import DataContext from '../../contexts/DataContext';
+import useShareReferr from '../../hooks/useShareReferr';
+
 import twitter from '../../assets/images/twitter.svg';
 import linkedin from '../../assets/images/linkedin.svg';
 import instagram from '../../assets/images/instagram.svg';
@@ -14,42 +15,26 @@ import telegram from '../../assets/images/telegram.svg';
 import discord from '../../assets/images/discord.svg';
 
 const ShareSocialList = ({ setCopy }) => {
-  const { data } = useContext(DataContext);
-
-  const onClick = (e) => {
-    e.preventDefault();
-    const el = document.createElement('textarea');
-    el.value = `Referral : ${data.referral_link}`;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-
-    const link = e.currentTarget.href;
-    setCopy(true);
-
-    setTimeout(() => {
-      window.open(link, '_blank');
-    }, 700);
-  };
+  const { msg, handleShareReferr } = useShareReferr(setCopy);
 
   return (
     <ul className="share-social-list">
       <li>
         <a
-          href="https://twitter.com/intent/tweet?url=http%3A%2F%2Freverent-snyder-9335f9.netlify.app/&text=Referral"
+          href={`https://twitter.com/intent/tweet?url=http%3A%2F%2F${msg.shortLink}/&text=${msg.twitter}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ReactSVG src={twitter} />
         </a>
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Freverent-snyder-9335f9.netlify.app&title=Create LinkedIn Share button on Website Webpages&summary=chillyfacts.com"
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2F${msg.shortLink}`}
           target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleShareReferr}
+          data-social="linkedin"
         >
           <ReactSVG src={linkedin} />
         </a>
@@ -58,38 +43,48 @@ const ShareSocialList = ({ setCopy }) => {
         <a
           href="https://www.instagram.com/direct/inbox/"
           target="_blank"
-          onClick={onClick}
+          rel="noopener noreferrer"
+          onClick={handleShareReferr}
+          data-social="instagram"
         >
           <ReactSVG src={instagram} />
         </a>
       </li>
       <li>
         <EmailShareButton
-          subject="Hello"
-          body="text"
+          subject="Referr and win "
+          body={msg.instagram}
           separator=""
-          url="https://reverent-snyder-9335f9.netlify.app/"
+          url=""
         >
           <ReactSVG src={email} />
         </EmailShareButton>
       </li>
       <li>
         <a
-          href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Freverent-snyder-9335f9.netlify.app&quote=Referral"
+          href={`https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F${msg.shortLink}&quote=${msg.facebook}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ReactSVG src={facebook} />
         </a>
       </li>
       <li>
-        <a href="weixin://" target="_blank" onClick={onClick}>
+        <a
+          href="weixin://"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleShareReferr}
+          data-social="wechat"
+        >
           <ReactSVG src={wechat} />
         </a>
       </li>
       <li>
         <a
-          href="https://telegram.me/share/?url=http%3A%2F%2Freverent-snyder-9335f9.netlify.app&text=Referral"
+          href={`https://telegram.me/share/?text=${msg.telegram}&url=http%3A%2F%2F${msg.shortLink}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ReactSVG src={telegram} />
         </a>
@@ -98,7 +93,9 @@ const ShareSocialList = ({ setCopy }) => {
         <a
           href="https://discord.com/channels/@me"
           target="_blank"
-          onClick={onClick}
+          rel="noopener noreferrer"
+          onClick={handleShareReferr}
+          data-social="discord"
         >
           <ReactSVG src={discord} />
         </a>
