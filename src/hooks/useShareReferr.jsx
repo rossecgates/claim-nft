@@ -24,7 +24,7 @@ ${msg.link}
 ${msg.hashtag}`;
 
   msg.facebook = `${msg.textUrl}%20${msg.hashtagUrl}`;
-  msg.telegram = `${msg.textUrl}%0D%0A${msg.hashtagUrl}`;
+  msg.telegram = `%0D%0A${msg.textUrl}%0D%0A%0D%0A${msg.hashtagUrl}`;
 
   const handleShareReferr = (e) => {
     e.preventDefault();
