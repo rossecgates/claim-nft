@@ -1,7 +1,5 @@
 /* eslint-disable no-console */
-
 const URL = 'https://getwaitlist.com/api/v1/waitlists/submit';
-const API_KEY = process.env.REACT_APP_API_KEY;
 
 const setupObj = (email) => {
   const referralLink =
@@ -15,7 +13,7 @@ const setupObj = (email) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify({
-      api_key: API_KEY,
+      api_key: '2UMW3K',
       email,
       referral_link: referralLink,
     }),
