@@ -14,7 +14,7 @@ const useShareReferr = (setCopy) => {
   msg.hashtagUrl = `%23generationcrypto`;
   msg.hashtag = '#generationcrypto';
 
-  msg.twitter = `%0D%0A${msg.hashtagUrl}%0D%0A${msg.textUrl}%0D%0A`;
+  msg.twitter = msg.textUrl;
 
   msg.linkedIn = `${msg.text} ${msg.hashtag}`;
   msg.instagram = `${msg.text}  
