@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import SignForm from '../../components/SignForm';
 import Footer from '../../layouts/Footer';
 import Header from '../../layouts/Header';
@@ -15,6 +16,11 @@ const Login = () => {
 
   return (
     <div className="login">
+      <Helmet>
+        <title>
+          GEN C Crypto Marketing Conference &amp; Contest | login and win prize
+        </title>
+      </Helmet>
       <Header className="login__header" />
       <div className="login__data">
         <Footer />
