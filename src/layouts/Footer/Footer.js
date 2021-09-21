@@ -10,7 +10,9 @@ const Footer = ({ className }) => (
       The Generation Crypto Conference and Contest is awarding over $1,000,000
       in prizes and new business opportunities.
     </p>
-    <p className="footer__text">Nov 1 — Nov 30, 2021</p>
+    <time className="footer__text footer__time" dateTime="2021-11-01">
+      Nov 1 — Nov 30, 2021
+    </time>
     <a
       className="footer__link"
       href="https://generationcrypto.org/"
