@@ -9,7 +9,7 @@ const Logo = () => (
       <img
         className="logo__img"
         src="/images/logo-background.png"
-        alt="background"
+        alt="flying background"
       />
     </div>
   </div>
