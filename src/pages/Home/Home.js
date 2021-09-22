@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Prize from '../../components/Prize';

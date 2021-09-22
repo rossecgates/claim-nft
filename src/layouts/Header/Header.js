@@ -10,26 +10,26 @@ const Header = ({ className }) => {
     switch (pathname) {
       case '/':
         return (
-          <div className={`header__text ${className || ''} `}>
+          <h1 className={`header__text ${className || ''} `}>
             Join the Crypto Marketing Conference&nbsp;&&nbsp;Contest
-          </div>
+          </h1>
         );
       case '/sign-in':
         return (
-          <div className={`header__text ${className || ''}`}>
+          <h1 className={`header__text ${className || ''}`}>
             <span className="header__text-color">Congrats!</span> You are signed
             up and ready to start referring.
-          </div>
+          </h1>
         );
       case '/login':
         return (
           <div className={`header__text ${className || ''} `}>
-            <div>
+            <h1>
               <span className="header__text-color header__text-login">
                 Login
               </span>{' '}
               to continue
-            </div>
+            </h1>
           </div>
         );
       default:
@@ -38,10 +38,10 @@ const Header = ({ className }) => {
   };
 
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
       {getHeaderText()}
-    </div>
+    </header>
   );
 };
 

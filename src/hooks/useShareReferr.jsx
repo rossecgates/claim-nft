@@ -8,8 +8,8 @@ const useShareReferr = (setCopy) => {
   msg.shortLink = msg.link.slice(8, msg.link.length);
 
   msg.text =
-    'You can win win over $1,000,000 in prizes  &  contracts at the Generation Crypto - Conference & Competition. Join me there';
-  msg.textUrl = `You can win win over $1,000,000 in prizes +%26+ contracts at the Generation Crypto - Conference+%26+Competition. Join me there`;
+    'You can win over $1,000,000 in prizes  &  contracts at the Generation Crypto - Conference & Competition. Join me there';
+  msg.textUrl = `You can win over $1,000,000 in prizes +%26+ contracts at the Generation Crypto - Conference+%26+Competition. Join me there`;
 
   msg.hashtagUrl = `%23generationcrypto`;
   msg.hashtag = '#generationcrypto';
