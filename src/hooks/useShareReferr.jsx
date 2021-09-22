@@ -1,10 +1,14 @@
-import { useContext } from 'react';
-import DataContext from '../contexts/DataContext';
+/* eslint-disable no-console */
+// import { useContext } from 'react';
+// import DataContext from '../contexts/DataContext';
 
 const useShareReferr = (setCopy) => {
-  const { data } = useContext(DataContext);
+  // eslint-disable-next-line spaced-comment
+  //const { data } = useContext(DataContext);
   const msg = {};
-  msg.link = data.referral_link;
+  // msg.link = data.referral_link;
+  msg.link = 'https://gencwin.netlify.app/';
+  console.log('msg:', msg.link);
   msg.shortLink = msg.link.slice(8, msg.link.length);
 
   msg.text =
