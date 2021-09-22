@@ -7,7 +7,7 @@ const useShareReferr = (setCopy) => {
   //const { data } = useContext(DataContext);
   const msg = {};
   // msg.link = data.referral_link;
-  msg.link = 'https://gencwin.netlify.app';
+  msg.link = 'https://gencwin.netlify.app/';
   console.log('msg:', msg.link);
   msg.shortLink = msg.link.slice(8, msg.link.length);
 
