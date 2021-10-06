@@ -45,7 +45,7 @@ const SignForm = ({ isLoginPage }) => {
       {isLoginPage ? (
         <SignButton className="sign-form__button" text="Submit" />
       ) : (
-        <SignButton className="sign-form__button" text="Sign up" />
+        <SignButton className="sign-form__button" text="Refer to Win" />
       )}
     </form>
   );
