@@ -28,6 +28,7 @@ const Home = () => {
           <Prize className="home__prize" />
           <p className="home__sign-up-text">Signup below and start referring</p>
           <SignForm />
+          <p className="footer__text">☑ receive emails from GenC</p>
           <p className="home__statistic">
             Already joined?&nbsp;
             <button
