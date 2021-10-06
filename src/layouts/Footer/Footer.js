@@ -19,7 +19,7 @@ const Footer = ({ className }) => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      Learn more &gt;
+      Win Bounties &gt;
     </a>
     <div>
       <a
