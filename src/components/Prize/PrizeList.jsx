@@ -12,23 +12,17 @@ const PrizeList = ({ className }) => (
 
     <div className="prize-list__item">
       <p className="prize-list__amount">$10k</p>
-      <p className="prize-list__text">
-        Refer the most attendees
-      </p>
+      <p className="prize-list__text">Refer the most attendees</p>
     </div>
 
     <div className="prize-list__item">
       <p className="prize-list__amount">$5k</p>
-      <p className="prize-list__text">
-        Refer the 2nd most attendees
-      </p>
+      <p className="prize-list__text">Refer the 2nd most attendees</p>
     </div>
 
     <div className="prize-list__item">
       <p className="prize-list__amount">$2k</p>
-      <p className="prize-list__text">
-        Refer the 3rd most attendees
-      </p>
+      <p className="prize-list__text">Refer the 3rd most attendees</p>
     </div>
   </div>
 );
