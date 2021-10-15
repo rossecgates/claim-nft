@@ -20,14 +20,14 @@ const PrizeList = ({ className }) => (
     <div className="prize-list__item">
       <p className="prize-list__amount">$5k</p>
       <p className="prize-list__text">
-        Refer the second most attendees
+        Refer the 2nd most attendees
       </p>
     </div>
 
     <div className="prize-list__item">
       <p className="prize-list__amount">$2k</p>
       <p className="prize-list__text">
-        Refer the third most attendees
+        Refer the 3rd most attendees
       </p>
     </div>
   </div>
