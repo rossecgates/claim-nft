@@ -5,9 +5,7 @@ import EmailContext from '../../contexts/EmailContext';
 import DataContext from '../../contexts/DataContext';
 import Header from '../../layouts/Header';
 import Footer from '../../layouts/Footer';
-import ReferrStatistic from '../../components/ReferrStatistic';
 import Prize from '../../components/Prize';
-import Share from '../../components/Share';
 import Loader from '../../components/Loader';
 import { signInUp } from '../../utils/queryApi';
 
@@ -55,11 +53,12 @@ const SignIn = () => {
         <Header />
         <div className="sign-in__data">
           <div>
-            <ReferrStatistic />
             <Footer className="sign-in__footer" />
           </div>
           <main>
-            <Share />
+            <div className="home__title">
+              <span className="home__title-earn">Then</span> join the conference
+            </div>
             <Prize />
           </main>
         </div>

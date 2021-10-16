@@ -11,14 +11,14 @@ const Header = ({ className }) => {
       case '/':
         return (
           <h1 className={`header__text ${className || ''} `}>
-            Join the Crypto Marketing Conference&nbsp;&&nbsp;Contest
+            Claim a Generation Crypto NFT
           </h1>
         );
       case '/sign-in':
         return (
           <h1 className={`header__text ${className || ''}`}>
-            <span className="header__text-color">Congrats!</span> You are signed
-            up and ready to start referring.
+            <span className="header__text-color">Congrats!</span> Check your
+            email for your NFT link
           </h1>
         );
       case '/login':
