@@ -20,6 +20,12 @@ const routes = [
     key: 'LOGIN',
     component: () => <Login />,
   },
+  {
+    path: '/shirt',
+    key: 'SIGN_IN',
+    exact: true,
+    component: () => <Home />,
+  },
 ];
 
 export default routes;
