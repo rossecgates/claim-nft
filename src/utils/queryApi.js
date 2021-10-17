@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const URL = 'https://getwaitlist.com/api/v1/waitlists/submit';
+const URL = 'https://hook.integromat.com/yeiqdj9umkq8u05robvyty64w3r230t3';
 
 const setupObj = (email) => {
   const referralLink =
@@ -13,7 +13,7 @@ const setupObj = (email) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify({
-      api_key: 'W2OHOS',
+      api_key: 'X',
       email,
       referral_link: referralLink,
     }),
