@@ -23,7 +23,7 @@ const SignIn = () => {
 
   useEffect(async () => {
     if (!dataInLocalStorage.registered_email && !email) {
-      history.push('/');
+      history.push('/sign-in');
     }
 
     const dataResponse = email
@@ -37,7 +37,7 @@ const SignIn = () => {
     } else {
       localStorage.removeItem('data');
       setLoader(false);
-      history.push('/');
+      history.push('/sign-in');
     }
   }, []);
 
